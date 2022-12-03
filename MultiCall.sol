@@ -60,7 +60,7 @@ contract MultiCall {
         return results;
     }
 
-    function getStaticNumber() public view returns (uint256){
-        return 1
+    function getStaticNumber() public pure returns (uint256){
+        return 1;
     }
 }
