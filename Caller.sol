@@ -40,6 +40,7 @@ contract Caller {
         return number;
     }
 
-    function getStaticNumber() public view returns (uint256){
-        return 2
+    function getStaticNumber() public pure returns (uint256){
+        return 2;
     }
+}
