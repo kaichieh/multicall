@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-contract Caller {
+contract Target {
 
     uint256 number;
     address private owner;
@@ -22,21 +22,21 @@ contract Caller {
         return owner;
     }
 
-    //0x6057361d
-    //["0x6057361d0000000000000000000000000000000000000000000000000000000011e17429"]
-    function store(uint256 num) public {
+    //0x3fb5c1cb
+    //["0x3fb5c1cb0000000000000000000000000000000000000000000000000000000011e17429"]
+    function setNumber(uint256 num) public {
         number = num;
     }
 
-    //0x915eef40
-    //["0x915eef400000000000000000000000000000000000000000000000000000000011e17429"]
-    function storeOwner(uint256 num) public {
+    //0xeddb3949
+    //["0xeddb394900000000000000000000000000000000000000000000000000000000011e17429"]
+    function setNumberOwnerOnly(uint256 num) public {
         require(msg.sender == owner, "Caller is not owner");
         number = num;
     }
 
-    // 0x6d4ce63c
-    function get() public view returns (uint256){
+    // 0xf2c9ecd8
+    function getNumber() public view returns (uint256){
         return number;
     }
 
